@@ -3,26 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      wordCount: 0
-    }
-  }
-
-  countWords() {
-    this.state.wordCount = 0
-    let newCount = wordCount ++
-    this.setState({wordCount:newCount})
-  }
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Hello Daniel! Lets get this bread.
           </p>
           <a
             className="App-link"
