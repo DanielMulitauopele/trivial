@@ -1,5 +1,7 @@
 # Trivial - The Greatest of Trivia Challenges
 
+<img src="https://github.com/DanielMulitauopele/trivial/blob/master/Screen%20Shot%202019-01-06%20at%203.33.28%20PM.png" title="landing-page" width="auto">
+
 ## Relevant Links
 
  * [Agile Board](https://waffle.io/DanielMulitauopele/trivial-api)
