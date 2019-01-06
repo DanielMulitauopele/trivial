@@ -11,7 +11,7 @@ class App extends Component {
           <h1>
             Trivial
           </h1>
-          <p>Pass the time with these clever 'preguntas'.</p>
+          <p>Reach the Top</p>
         </header>
       </div>
     );
