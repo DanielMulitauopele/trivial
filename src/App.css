@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Fujimaru';
+  src: local('Fujimaru'), url(./Fujimaru-Regular.ttf) format('woff');
+}
+
 .App {
   text-align: center;
 }
@@ -15,6 +20,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: 'Fujimaru';
   color: black;
 }
 
