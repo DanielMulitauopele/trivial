@@ -3,6 +3,20 @@ import logo from './bonsaiblack.png';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      startedGame: false
+    }
+  }
+
+  startGame = () => {
+    this.setState({
+      startedGame: true
+    });
+  };
+
+
   render() {
     return (
       <div className="App">
@@ -11,7 +25,7 @@ class App extends Component {
           <h1>
             Trivial
           </h1>
-          <p>Reach the Top</p>
+          <a href={this.startGame} className="Start-game">Reach the Top</a>
         </header>
       </div>
     );
