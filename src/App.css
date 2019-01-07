@@ -23,6 +23,13 @@
   color: black;
 }
 
+.Start-game {
+  background-color: #FFFFFF;
+  color: black;
+  font-family: 'Fujimaru';
+  font-size: calc(12px + 2vmin);
+}
+
 .App-link {
   color: #61dafb;
 }
