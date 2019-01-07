@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import logo from './bonsaiblack.png';
 import './App.css';
+import { fetchQuestions } from "./Utils/API/index";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startedGame: false
+      settingsListed: false
     }
   }
 
-  startGame = () => {
+  toggleSettings = () => {
     this.setState({
-      startedGame: true
+      settingsListed: !this.state.settingsListed
     });
+    console.log(this.state)
   };
 
 
@@ -25,7 +27,7 @@ class App extends Component {
           <h1>
             Trivial
           </h1>
-          <a href={this.startGame} className="Start-game">Reach the Top</a>
+          <button onClick={this.toggleOptions} className="Start-game">Reach the Top</button>
         </header>
       </div>
     );
