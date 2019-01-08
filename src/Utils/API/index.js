@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
 class TriviaJSON extends Component {
-  constructor() {
-    super();
-  }
-
   getQuestions = async () => {
-    const response = fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
-    const result = await response.json()
-    return result
+    fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
+    .then(response => {
+      return response
+    })
+    // const result = await response.json();
+    // return result
   }
 }
 
 export default TriviaJSON;
-
 
 // export const fetchQuestions = async (amount, category, difficulty, type) => {
 //   const url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`
