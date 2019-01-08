@@ -9,7 +9,7 @@ class QuestionContainer extends Component {
     }
   }
 
-  getQuestions = (props) => {
+  displayQuestions = (props) => {
     let questions = props.results.map((question, index) => {
       return(
          <div key={index}>

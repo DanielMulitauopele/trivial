@@ -8,8 +8,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      settingsListed: false
+      settingsListed: false,
+      questions: []
     }
+    this.json = new TriviaJSON();
+  }
+
+  componentDidMount() {
+    this.setQuestions();
   }
 
   toggleSettings = () => {
@@ -18,6 +24,11 @@ class App extends Component {
     });
     console.log(this.state)
   };
+
+  setQuestions = async () => {
+    const questions = this.json.getQuestions();
+    this.setState({questions: questions})
+  }
 
   render() {
     return (
@@ -30,7 +41,7 @@ class App extends Component {
           <button onClick={this.toggleSettings} className="Start-game">Reach the Top</button>
         </header>
         <QuestionContainer
-        getQuestions={this.TriviaJSON}/>
+        questions={this.state.questions}/>
       </div>
     );
   }
