@@ -14,7 +14,7 @@ class App extends Component {
     this.json = new TriviaJSON();
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.setQuestions();
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   setQuestions = async () => {
-    const questions = this.json.getQuestions();
+    const questions = await this.json.getQuestions();
     this.setState({questions: questions})
   }
 
