@@ -5,14 +5,10 @@ class TriviaJSON extends Component {
     super();
   }
 
-  componentDidMount = () => {
-    let response = fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
-    const result = response.json()
+  getQuestions = async () => {
+    const response = fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
+    const result = await response.json()
     return result
-  }
-
-  render() {
-    return this.componentDidMount
   }
 }
 
