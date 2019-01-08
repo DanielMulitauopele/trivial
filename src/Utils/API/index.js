@@ -9,34 +9,34 @@ class TriviaJSON extends Component {
   }
 
   componentDidMount() {
-    fetch('https://opentdb.com/api.php?amount=23&category=&difficulty=&type=')
+    fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
     .then(results => {
       return results.json();
     }).then(data => {
-      let questions = data.results.map(question => {
+      let questions = data.results.map((question, index) => {
         return(
-          <div>
+          <div key={index}>
           <h3>{question.question}</h3>
           <p>{question.category}</p>
           <p>{question.difficulty}</p>
+
           <ul>
-          <li>{question.correct_answer}</li>
-          <li>{question.correct_answer}</li>
-          <li>{question.correct_answer}</li>
-          <li>{question.correct_answer}</li>
+            <li>{question.correct_answer}</li>
+            <li>{question.correct_answer}</li>
+            <li>{question.correct_answer}</li>
+            <li>{question.correct_answer}</li>
           </ul>
           </div>
         )
       })
       this.setState({questions: questions})
-      console.log("state". this.state.questions)
     })
   };
 
   render() {
     return(
       <div>
-      {this.state.questions}
+        {this.state.questions}
       </div>
     )
   }
