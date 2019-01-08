@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './bonsaiblack.png';
 import './App.css';
-import { fetchQuestions } from "./Utils/API/index.js";
 import TriviaJSON from './Utils/API/index.js'
+import QuestionContainer from './Components/QuestionContainer/QuestionContainer'
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,6 @@ class App extends Component {
     console.log(this.state)
   };
 
-
   render() {
     return (
       <div className="App">
@@ -30,7 +29,8 @@ class App extends Component {
           </h1>
           <button onClick={this.toggleSettings} className="Start-game">Reach the Top</button>
         </header>
-        <TriviaJSON/>
+        <QuestionContainer
+        getQuestions={this.TriviaJSON}/>
       </div>
     );
   }
