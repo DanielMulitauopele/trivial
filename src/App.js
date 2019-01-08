@@ -28,6 +28,7 @@ class App extends Component {
   setQuestions = async () => {
     const questions = await this.json.getQuestions();
     this.setState({questions: questions})
+    debugger;
   }
 
   render() {
@@ -40,8 +41,10 @@ class App extends Component {
           </h1>
           <button onClick={this.toggleSettings} className="Start-game">Reach the Top</button>
         </header>
-        <QuestionContainer
-        questions={this.state.questions}/>
+        <div>
+          <QuestionContainer
+          questions={questions}/>
+        </div>
       </div>
     );
   }

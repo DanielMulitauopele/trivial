@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 
 class TriviaJSON extends Component {
   getQuestions = async () => {
-    fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
+    let data = fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
     .then(response => {
-      return response
+      return response.json()
     })
-    // const result = await response.json();
-    // return result
+    return data
   }
 }
 
