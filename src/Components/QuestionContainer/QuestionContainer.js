@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class QuestionContainer extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      questions: []
+      data: []
     }
   }
 
