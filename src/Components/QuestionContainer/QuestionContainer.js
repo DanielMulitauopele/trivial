@@ -1,1 +1,7 @@
-class QuestionContainer
+export const QuestionContainer (props) {
+  return ( 
+    <Question(props)
+
+    />
+  )
+}

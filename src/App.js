@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './bonsaiblack.png';
 import './App.css';
-import { fetchQuestions } from "./Utils/API/index";
+import { fetchQuestions } from "./Utils/API/index.js";
+import TriviaJSON from './Utils/API/index.js'
 
 class App extends Component {
   constructor(props) {
@@ -27,8 +28,9 @@ class App extends Component {
           <h1>
             Trivial
           </h1>
-          <button onClick={this.toggleOptions} className="Start-game">Reach the Top</button>
+          <button onClick={this.toggleSettings} className="Start-game">Reach the Top</button>
         </header>
+        <TriviaJSON/>
       </div>
     );
   }
