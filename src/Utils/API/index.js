@@ -3,42 +3,16 @@ import React, { Component } from 'react';
 class TriviaJSON extends Component {
   constructor() {
     super();
-    this.state = {
-      questions: []
-    }
   }
 
   componentDidMount() {
-    fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      let questions = data.results.map((question, index) => {
-        return(
-          <div key={index}>
-          <h3>{question.question}</h3>
-          <p>{question.category}</p>
-          <p>{question.difficulty}</p>
-
-          <ul>
-            <li>{question.correct_answer}</li>
-            <li>{question.correct_answer}</li>
-            <li>{question.correct_answer}</li>
-            <li>{question.correct_answer}</li>
-          </ul>
-          </div>
-        )
-      })
-      this.setState({questions: questions})
-    })
-  };
+    response = fetch('https://opentdb.com/api.php?amount=3&category=&difficulty=&type=')
+    const result = await response.json()
+    return result
+  }
 
   render() {
-    return(
-      <div>
-        {this.state.questions}
-      </div>
-    )
+    return componentDidMount
   }
 }
 
