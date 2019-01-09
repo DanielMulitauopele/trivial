@@ -1,14 +1,20 @@
-return(
-   <div key={index}>
-     <h3>{question.question}</h3>
-     <p>{question.category}</p>
-     <p>{question.difficulty}</p>
+import React from 'react';
 
-     <ul>
-       <li>{question.correct_answer}</li>
-       <li>{question.correct_answer}</li>
-       <li>{question.correct_answer}</li>
-       <li>{question.correct_answer}</li>
-     </ul>
-   </div>
- )
+const Question = (props, index) => {
+  return(
+    <div key={index}>
+      <h3>{props.question.question}</h3>
+      <p>{props.question.category}</p>
+      <p>{props.question.difficulty}</p>
+
+      <ul>
+        <li>{props.question.correct_answer}</li>
+        <li>{props.question.correct_answer}</li>
+        <li>{props.question.correct_answer}</li>
+        <li>{props.question.correct_answer}</li>
+      </ul>
+    </div>
+  )
+}
+
+export default Question;
