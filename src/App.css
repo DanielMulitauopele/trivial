@@ -32,8 +32,27 @@
   outline: none;
 }
 
+.Game-header {
+  height: 5rem;
+  text-align: center;
+}
+
+.End-game {
+  background-color: Transparent;
+  color: red;
+  font-family: 'Fujimaru';
+  font-size: 1.7rem;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+}
+
 .Start-game:hover {
   color: red;
+}
+
+.End-game:hover {
+  color: black;
 }
 
 .App-link {
