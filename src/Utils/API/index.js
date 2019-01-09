@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class TriviaJSON extends Component {
   getQuestions = async () => {
