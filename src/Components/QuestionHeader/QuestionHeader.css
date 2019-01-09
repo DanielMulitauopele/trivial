@@ -1,0 +1,10 @@
+.Game-header {
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid red;
+  position: fixed;
+  background-image: url('./branch.png');
+  background-size: '100px';
+  background-color: white;
+}
