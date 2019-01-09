@@ -3,6 +3,7 @@
   background-color: white;
   border-radius: .7rem;
   box-shadow: 6px 6px 10px #888888;
+  font-family: 'Poppins', sans-serif;
 }
 
 .question {
@@ -22,8 +23,11 @@
 }
 
 .answers {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  margin: 5rem;
+  display: inline;
   padding-bottom: 1rem;
+}
+
+li {
+  list-style-type: none;
 }
