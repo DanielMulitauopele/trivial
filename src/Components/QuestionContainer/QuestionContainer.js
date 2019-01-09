@@ -8,64 +8,17 @@ class QuestionContainer extends Component {
     }
   }
 
-  displayQuestions = () => {
-    let questions = this.props.questions.results.map((question, index) => {
-      return(
-         <div key={index}>
-           <h3>{question.question}</h3>
-           <p>{question.category}</p>
-           <p>{question.difficulty}</p>
-
-           <ul>
-             <li>{question.correct_answer}</li>
-             <li>{question.correct_answer}</li>
-             <li>{question.correct_answer}</li>
-             <li>{question.correct_answer}</li>
-           </ul>
-         </div>
-       )
-    })
-    this.setState({questions: questions})
-  }
-
   render(){
+    let questions = this.props.questions.map((question) => {
+      <Question question={question}/>
+    })
+
     return (
       <div>
-        {this.state.questions}
+        {questions}
       </div>
     )
   }
 }
 
 export default QuestionContainer;
-// export const QuestionContainer (props) {
-//
-//   {
-//  return results.json();
-// }).then(data => {
-//  let questions = data.results.map((question, index) => {
-//    return(
-//      <div key={index}>
-//      <h3>{question.question}</h3>
-//      <p>{question.category}</p>
-//      <p>{question.difficulty}</p>
-//
-//      <ul>
-//        <li>{question.correct_answer}</li>
-//        <li>{question.correct_answer}</li>
-//        <li>{question.correct_answer}</li>
-//        <li>{question.correct_answer}</li>
-//      </ul>
-//      </div>
-//    )
-//  })
-//  this.setState({questions: questions})
-// })
-// };
-//
-//   return (
-//     <Question(props)
-//
-//     />
-//   )
-// }
