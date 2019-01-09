@@ -32,10 +32,6 @@
   outline: none;
 }
 
-.Question-container {
-  margin-top: 5rem;
-}
-
 .End-game {
   background-color: Transparent;
   color: red;
@@ -44,7 +40,10 @@
   padding: 1rem 1rem;
   border: none;
   outline: none;
+  position: fixed;
   z-index: 2;
+  right: .7rem;
+  top: .3rem;
 }
 
 .Start-game:hover {
