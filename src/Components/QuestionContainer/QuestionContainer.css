@@ -1,3 +1,6 @@
 .Question-container {
-  margin-top: 2.5rem;
+  margin-top: 6.5rem;
+  background-image: url('./branch.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 }

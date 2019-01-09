@@ -5,8 +5,8 @@ const Question = (props, index) => {
   return(
     <div key={index} className="container">
       <h3 className="question">{props.question.question}</h3>
-      <p className="category">{props.question.category}</p>
-      <p className="difficulty">{props.question.difficulty}</p>
+      <p className="category">Category: {props.question.category}</p>
+      <p className="difficulty">Difficulty: {props.question.difficulty}</p>
 
       <form action="" className="answers">
         <ul>

@@ -3,9 +3,7 @@ import './QuestionHeader.css'
 
 const QuestionHeader = () => {
   return(
-    <header className="Game-header">
-    
-    </header>
+    <header className="Game-header"></header>
   )
 }
 
