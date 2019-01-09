@@ -4,12 +4,12 @@ class QuestionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      questions: []
     }
   }
 
-  displayQuestions = (props) => {
-    let questions = props.results.map((question, index) => {
+  displayQuestions = () => {
+    let questions = this.props.questions.results.map((question, index) => {
       return(
          <div key={index}>
            <h3>{question.question}</h3>

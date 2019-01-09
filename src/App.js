@@ -42,7 +42,7 @@ class App extends Component {
         </header>
         <div>
           <QuestionContainer
-          setQuestions={this.state.questions}/>
+          questions={this.state.questions}/>
         </div>
       </div>
     );
