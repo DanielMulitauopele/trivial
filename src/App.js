@@ -39,7 +39,7 @@ class App extends Component {
         <div>
           <div>
             <QuestionHeader />
-            <button onClick={this.toggleQuestions} className="End-game">Surrender!</button>
+            <button onClick={this.toggleQuestions} className="End-game">Surrender?</button>
           </div>
           <div>
             <QuestionContainer questions={this.state.questions}/>

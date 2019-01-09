@@ -33,17 +33,20 @@
 }
 
 .End-game {
+  height: 3rem;
+  text-align: center;
+  vertical-align: middle;
   background-color: Transparent;
   color: red;
   font-family: 'Fujimaru';
-  font-size: 1.7rem;
-  padding: 1rem 1rem;
+  font-size: 2rem;
   border: none;
   outline: none;
   position: fixed;
   z-index: 2;
-  right: .7rem;
-  top: .3rem;
+  left: 3rem;
+  top: 1rem;
+  line-height: 1px;
 }
 
 .Start-game:hover {
