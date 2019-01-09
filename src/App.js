@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './bonsaiblack.png';
 import branch from './branch.png';
 import './App.css';
+import './Components/QuestionContainer/QuestionContainer.css';
 import TriviaJSON from './Utils/API/index.js'
 import QuestionContainer from './Components/QuestionContainer/QuestionContainer'
 
@@ -40,10 +41,10 @@ class App extends Component {
   render() {
     if (this.state.questionsListed === true) {
       return (
+        // <header className="Game-header" style={ BranchStyle }>
+        //   <button onClick={this.toggleQuestions} className="End-game">Climb Down</button>
+        // </header>
         <div>
-          <header className="Game-header" style={ BranchStyle }>
-            <button onClick={this.toggleQuestions} className="End-game">Climb Down</button>
-          </header>
           <div>
             <QuestionContainer questions={this.state.questions}/>
           </div>
