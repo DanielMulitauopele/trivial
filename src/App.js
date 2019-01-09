@@ -41,13 +41,13 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-        <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-        Trivial
-        </h1>
-        <button onClick={this.toggleQuestions} className="Start-game">Reach the Top</button>
-        </header>
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1>
+              Trivial
+            </h1>
+            <button onClick={this.toggleQuestions} className="Start-game">Reach the Top</button>
+          </header>
         </div>
       );
     }
