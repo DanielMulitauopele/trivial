@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      settingsListed: false,
+      questionsListed: false,
       questions: []
     }
     this.json = new TriviaJSON();
@@ -18,9 +18,9 @@ class App extends Component {
     this.setQuestions();
   }
 
-  toggleSettings = () => {
+  toggleQuestions = () => {
     this.setState({
-      settingsListed: !this.state.settingsListed
+      questionsListed: !this.state.questionsListed
     });
     console.log(this.state)
   };
@@ -31,21 +31,26 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>
-            Trivial
-          </h1>
-          <button onClick={this.toggleSettings} className="Start-game">Reach the Top</button>
-        </header>
+    if (this.state.questionsListed === true) {
+      return (
         <div>
-          <QuestionContainer
-          questions={this.state.questions}/>
+          <button onClick={this.toggleQuestions} className="Start-game">Climb Down</button>
+          <QuestionContainer questions={this.state.questions}/>
         </div>
-      </div>
-    );
+      )
+    } else {
+      return (
+        <div className="App">
+        <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>
+        Trivial
+        </h1>
+        <button onClick={this.toggleQuestions} className="Start-game">Reach the Top</button>
+        </header>
+        </div>
+      );
+    }
   }
 }
 

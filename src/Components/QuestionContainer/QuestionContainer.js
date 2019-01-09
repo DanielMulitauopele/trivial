@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Question from '../Question/Question.js'
 
 class QuestionContainer extends Component {
   constructor(props) {
@@ -9,8 +10,8 @@ class QuestionContainer extends Component {
   }
 
   render(){
-    let questions = this.props.questions.map((question) => {
-      <Question question={question}/>
+    const questions = this.props.questions.map((question, index) => {
+      return <Question key={index} question={question}/>
     })
 
     return (
